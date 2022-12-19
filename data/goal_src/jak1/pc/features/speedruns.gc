@@ -265,6 +265,13 @@
   (close-specific-task! tsk (task-status need-resolution))
   )
 
+(defun speedrun-practice-hub1-hundo-start-run ()
+  (initialize! *game-info* 'game (the-as game-save #f) "game-start")
+  (set! (-> *game-info* current-continue) (get-continue-by-name *game-info* "game-start"))
+  (speedrun-reset-common-settings)
+  (none)
+  )
+
 (defun hub2-hundo-prep ()
   ;; set collectable counts
   ;; geyser
